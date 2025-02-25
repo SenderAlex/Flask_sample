@@ -1,10 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{%extends 'base.html'%}
 
-</body>
-</html>
+{%block title%}
+Главная о спорте
+{%endblock%}
+
+{%block content%}
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <center><h1>{{M10}}</h1></center>
+      <img src="https://ss.sport-express.ru/userfiles/materials/184/1849317/volga.jpg" class="d-block w-100" alt="Messi">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <center><h1>{{Sheva}}</h1></center>
+      <img src="https://cdn.segodnya.ua/i/image_728x410/media/image/61e/866/bda/61e866bda35db.jpg.webp" class="d-block w-100" alt="Shevchenko">
+    </div>
+    <div class="carousel-item">
+      <center><h1>{{CR7}}</h1></center>
+      <img src="https://static.ua-football.com/img/upload/21/2a6555.jpeg" class="d-block w-100" alt="Ronaldo">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Предыдущий</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Следующий</span>
+  </button>
+</div>
+{% endblock %}
